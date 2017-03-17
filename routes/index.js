@@ -10,7 +10,7 @@ router.get('/', (req, res, next) => {
     const preData = JSON.parse(body).results[0];
     // var data = entities.decode(preData);
     console.log('I am the trivia data: ' + preData)
-    res.json({data: data});
+    res.json({data: preData});
   });
 });
 
