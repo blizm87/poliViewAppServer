@@ -12,6 +12,7 @@ router.get('/', (req, res, next) => {
   //   var data = entities.decode(preData);
   //   res.send(data);
   // });
+  res.send('I am working');
 });
 
 module.exports = router;
