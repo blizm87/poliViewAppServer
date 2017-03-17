@@ -1,6 +1,6 @@
 const express = require('express');
 const request = require('request');
-const entities = require('html-entities').AllHtmlEntities;
+// const entities = require('html-entities').AllHtmlEntities;
 const router = express.Router();
 const title = 'PoliView Entertainment';
 
@@ -12,7 +12,7 @@ router.get('/', (req, res, next) => {
   //   var data = entities.decode(preData);
   //   res.send(data);
   // });
-  res.send('I am working');
+  res.json({data: 'I am working'});
 });
 
 module.exports = router;
