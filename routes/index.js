@@ -16,6 +16,7 @@ router.get('/quote', (req, res, next) => {
   let url = 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1';
   request.get(url, (err, response, body) => {
     const data = JSON.parse(body).results[0];
+    console.log('I am the data: ' + data)
     res.json({data: data});
   });
 });
