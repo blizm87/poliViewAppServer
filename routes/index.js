@@ -3,12 +3,11 @@ const request = require('request');
 const router = express.Router();
 
 router.get('/', (req, res, next) => {
-  const url = req.query.trivQuery;
-  console.log('I am the trivia request: ' + url)
-  console.log(url)
+  console.log('I am the category: ' + req.query.category)
+  let url = `https://www.opentdb.com/api.php?amount=1&category=${req.query.category}&difficulty=medium&type=multiple`
+  console.log('I am the url: ' + url)
   request.get(url, (err, response, body) => {
     const preData = JSON.parse(body).results[0];
-    console.log('I am the trivia data: ' + preData)
     res.json({data: preData});
   });
 });
