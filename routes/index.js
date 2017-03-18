@@ -20,9 +20,9 @@ router.get('/quote', (req, res, next) => {
   let url = 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1';
   request.get(url, (err, response, body) => {
     console.log(body)
-    // const data = JSON.parse(body).results[0];
+    const data = JSON.parse(body)
     // console.log('I am the data: ' + data)
-    res.json({data: body});
+    res.json({data: data});
   });
 });
 
