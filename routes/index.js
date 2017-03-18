@@ -2,6 +2,10 @@ const express = require('express');
 const request = require('request');
 const router = express.Router();
 
+router.get('/', (req, res, next) => {
+  res.send("I worked!!!")
+})
+
 router.get('/trivGame', (req, res, next) => {
   console.log('I am the category: ' + req.query.category)
   let url = `https://www.opentdb.com/api.php?amount=1&category=${req.query.category}&difficulty=medium&type=multiple`
