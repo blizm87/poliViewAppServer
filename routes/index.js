@@ -3,7 +3,7 @@ const request = require('request');
 const router = express.Router();
 
 router.get('/', (req, res, next) => {
-  res.send("I worked!!!")
+  res.json({data: "I worked!!!"})
 })
 
 // router.get('/trivGame', (req, res, next) => {
